@@ -16,4 +16,8 @@
 
 (defn advantage-score
   [player]
-  (str "Advantage" " " player))
+  (str "Advantage " player))
+
+(defn winner-score
+  [player]
+  (str "Win for " player))

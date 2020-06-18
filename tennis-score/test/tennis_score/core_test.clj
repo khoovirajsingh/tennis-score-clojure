@@ -18,3 +18,7 @@
   (is (= "Advantage player 1" (advantage-score "player 1")))
   (is (= "Advantage player 2" (advantage-score "player 2"))))
 
+
+(deftest display-score-when-there-is-a-winner
+  (is (= "Win for player 1" (winner-score "player 1")))
+  (is (= "Win for player 2" (winner-score "player 2"))))
