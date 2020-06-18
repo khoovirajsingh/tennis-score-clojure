@@ -5,11 +5,10 @@
   [point]
   ({0 "Love", 1 "Fifteen", 2 "Thirty", 3 "Forty"} point))
 
-(defn running-score
+(defn different-scores
   [playerOne playerTwo]
   (str (point-to-score playerOne) "-" (point-to-score playerTwo)))
 
-(defn -main
-  "I don't do a whole lot ... yet."
-  [& args]
-  (println "Hello, World!"))
+(defn tie-score
+  [point]
+  (str (point-to-score point) "-" "All"))
