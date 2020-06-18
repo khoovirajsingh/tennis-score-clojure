@@ -13,3 +13,8 @@
   (is (= "Love-All" (tie-score 0)))
   (is (= "Thirty-All" (tie-score 2)))
   (is (= "Deuce" (tie-score 3))))
+
+(deftest display-score-when-there-is-advantage
+  (is (= "Advantage player 1" (advantage-score "player 1")))
+  (is (= "Advantage player 2" (advantage-score "player 2"))))
+

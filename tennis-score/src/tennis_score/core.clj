@@ -13,3 +13,7 @@
   [point]
   (if (> point 2) "Deuce" 
     (str (point-to-score point) "-" "All")))
+
+(defn advantage-score
+  [player]
+  (str "Advantage" " " player))
