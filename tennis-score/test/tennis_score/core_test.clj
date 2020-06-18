@@ -29,8 +29,8 @@
   (is (= false (is-winner? 4 3))))
 
 (deftest winner-name-for-player
-  (is (= "player 1" (winner-name 4 2)))
-  (is (= "player 2" (winner-name 2 4))))
+  (is (= "player 1" (leader-name 4 2)))
+  (is (= "player 2" (leader-name 2 4))))
 
 (deftest is-advantage
   (is (= false (is-advantage? 0 0)))
