@@ -37,3 +37,14 @@
   (is (= false (is-advantage? 4 2)))
   (is (= true (is-advantage? 4 3)))
   (is (= true (is-advantage? 8 7))))
+
+(deftest running-score-for-tennis-game
+  (is (= "Love-All" (running-score 0 0)))
+  (is (= "Fifteen-Love" (running-score 1 0)))
+  (is (= "Advantage player 1" (running-score 4 3)))
+  (is (= "Deuce" (running-score 4 4)))
+  (is (= "Win for player 2" (running-score 4 6))))
+  
+
+
+

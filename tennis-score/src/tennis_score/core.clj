@@ -39,6 +39,18 @@
   (let [difference (abs (- playerOne playerTwo))
         is-any-score-thirty? (or (> playerOne 1) (> playerTwo 1))]
     (and (= difference 1) is-any-score-thirty?)))
+
+(defn is-tie?
+  [playerOne playerTwo]
+  (= playerOne playerTwo))
+
+(defn running-score
+  [playerOne playerTwo]
+  (cond
+    (is-winner? playerOne playerTwo) (winner-score (winner-name playerOne playerTwo))
+    (is-advantage? playerOne playerTwo) (advantage-score (winner-name playerOne playerTwo))
+    (is-tie? playerOne playerTwo) (tie-score playerOne)
+    :else (different-scores playerOne playerTwo)))
     
 
 
