@@ -26,8 +26,9 @@
 
 (defn is-winner?
   [playerOne playerTwo]
-  (let [difference (abs (- playerOne playerTwo))]
-    (and (> difference 1) (or (> playerOne 2) (> playerTwo 2)))))
+  (let [difference (abs (- playerOne playerTwo))
+        is-any-score-forty (or (> playerOne 2) (> playerTwo 2))]
+    (and (> difference 1) is-any-score-forty)))
     
 
 
