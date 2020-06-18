@@ -2,6 +2,5 @@
   (:require [clojure.test :refer :all]
             [tennis-score.core :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(deftest point-is-mapped-to-score-description
+  (is (= "Love" (point-to-score-description 0))))
