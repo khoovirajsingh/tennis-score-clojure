@@ -11,4 +11,5 @@
 
 (defn tie-score
   [point]
-  (str (point-to-score point) "-" "All"))
+  (if (> point 2) "Deuce" 
+    (str (point-to-score point) "-" "All")))

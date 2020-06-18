@@ -11,4 +11,5 @@
 
 (deftest display-score-when-points-are-same-for-both-players
   (is (= "Love-All" (tie-score 0)))
-  (is (= "Thirty-All" (tie-score 2))))
+  (is (= "Thirty-All" (tie-score 2)))
+  (is (= "Deuce" (tie-score 3))))
