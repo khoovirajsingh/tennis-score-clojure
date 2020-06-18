@@ -27,3 +27,13 @@
   (is (= false (is-winner? 0 0)))
   (is (= true (is-winner? 4 2)))
   (is (= false (is-winner? 4 3))))
+
+(deftest winner-name-for-player
+  (is (= "player 1" (winner-name 4 2)))
+  (is (= "player 2" (winner-name 2 4))))
+
+(deftest is-advantage
+  (is (= false (is-advantage? 0 0)))
+  (is (= false (is-advantage? 4 2)))
+  (is (= true (is-advantage? 4 3)))
+  (is (= true (is-advantage? 8 7))))
