@@ -22,3 +22,8 @@
 (deftest display-score-when-there-is-a-winner
   (is (= "Win for player 1" (winner-score "player 1")))
   (is (= "Win for player 2" (winner-score "player 2"))))
+
+(deftest is-winner
+  (is (= false (is-winner? 0 0)))
+  (is (= true (is-winner? 4 2)))
+  (is (= false (is-winner? 4 3))))

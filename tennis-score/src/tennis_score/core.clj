@@ -21,3 +21,13 @@
 (defn winner-score
   [player]
   (str "Win for " player))
+
+(defn abs [n] (max n (- n)))
+
+(defn is-winner?
+  [playerOne playerTwo]
+  (let [difference (abs (- playerOne playerTwo))]
+    (and (> difference 1) (or (> playerOne 2) (> playerTwo 2)))))
+    
+
+
